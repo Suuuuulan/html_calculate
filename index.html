@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js计算器</title>
+</head>
+<body>
+<script>
+function calculate() {
+    if (document.getElementById("input1").value == "") {
+        alert(document.getElementById("input1").value = "请输入计算表达式！");
+        return;
+    }
+    var x =document.getElementById("input1").value;
+    var num = eval(x);
+
+    document.getElementById("result").innerText = "结果: " + num;
+}</script>
+    <h1>JavaScript计算器</h1>
+    <input type="text" id="input1" value="" style="font-size: 20px; width: 300px;height: 46px;">
+    <button onclick="calculate()" style=" font-size: 20px; width: 200px;height: 51px;">计算</button>
+    <p id="result" style="font-size: 20px; color: blueviolet;">结果: </p >   
+</body>
+</html>
