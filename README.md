@@ -2,5 +2,9 @@
 初学javascript,刚好写个顺手的电脑上用的小工具.Windows自带的计算器不太符合我的需求.
 
 ## 图片展示
-
+### 更新前
 ![image.png](https://imgbed.freebird.day/file/1764849091311_image.png)
+
+---
+### 更新后
+![image.png](https://imgbed.freebird.day/file/1764855225563_image.png)
