@@ -3,8 +3,13 @@
 
 <head>
     <style>
+        body {
+            width: 80%;
+            margin: 0 auto;
+        }
+
         div.center {
-            margin: auto;
+            margin: 0 auto;
             width: 80%;
             border: 3px solid rgb(0, 0, 0);
             padding: 10px;
@@ -14,7 +19,24 @@
             text-align: center;
         }
 
+        input.center {
+            position: relative;
+            left: 0%;
+            
+        }
+        button.positioned {
+            position: relative;
+            background: yellow;
+            top: 2%;
+            left: 25%;
+        }
 
+        button.positioned button.positioned {
+            position: relative;
+            background: yellow;
+            top: 2%;
+            left: 75%;
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,11 +69,14 @@
     </script>
     <h1>JavaScript计算器</h1>
     <div class="center">
-        <input class="center" type="text" id="input1" value="" style="font-size: 20px; width: 500px;height: 46px;">
+        <input class="center" type="text" id="input1" value="" style="width: 100%;font-size: 20px;height: 46px;">
         <br><br>
-        <button class="center" onclick="calculate()" style=" font-size: 20px; width: 200px;height: 51px;">计算</button>
-        <button class="center" onclick="clearInput()" style=" font-size: 20px; width: 200px;height: 51px;">清空</button>
-
+        <span>
+            <button class="positioned" onclick="calculate()"
+                style=" font-size: 20px; width: 200px;height: 51px;">计算</button>
+            <button class="positioned" onclick="clearInput()"
+                style=" font-size: 20px; width: 200px;height: 51px;">清空</button>
+        </span>
         <p id="result" style="font-size: 20px; color: blueviolet;">结果: </p>
     </div>
 </body>
