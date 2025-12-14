@@ -22,13 +22,14 @@
         input.center {
             position: relative;
             left: 0%;
-            
+
         }
+
         button {
             border: none;
             border-radius: 10px;
             cursor: pointer;
-            
+
         }
 
         button.positioned1 {
@@ -46,7 +47,8 @@
             top: 2%;
             left: 30%;
         }
-        button:hover{
+
+        button:hover {
             background-color: rgb(221, 118, 0);
         }
     </style>
@@ -57,6 +59,7 @@
 
 <body>
     <script>
+
         function calculate() {
             if (document.getElementById("input1").value == "") {
                 document.getElementById("input1").value = "请输入计算表达式！";
@@ -76,12 +79,22 @@
             }
         }
 
-
-
     </script>
     <h1>JavaScript计算器</h1>
     <div class="center">
-        <input class="center" type="text" id="input1" value="" style="width: 100%;font-size: 20px;height: 46px;">
+        <input id="input1" class="center" type="text" value="" style="width: 100%;font-size: 20px;height: 46px;"
+            autofocus>
+        <script>
+            const inputElement = document.getElementById('input1');
+
+            inputElement.addEventListener('keyup', function (event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    calculate();
+                }
+            });
+        </script>
+
         <br><br>
         <span>
             <button class="positioned1" onclick="calculate()"
